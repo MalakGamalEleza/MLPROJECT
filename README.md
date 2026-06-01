@@ -3,8 +3,8 @@
 > A machine learning web application that predicts breast cancer patient survival outcomes using clinical, genomic, and treatment data from the METABRIC dataset.
 
 **Developer:** Malak Gamal Ahmed Sanad Eleza  
-**Student ID:** 221000014  
-**Programme:** Data Science — Final Project 2024/2025
+**Student ID:** 221000014   
+**Programme:** CBIO313: Data Mining and Machine Learning-2026SPRG
 
 ---
 
@@ -46,8 +46,8 @@ The solution is an end-to-end data science pipeline — from raw, uncleaned data
 | Property | Detail |
 |---|---|
 | Source | [Kaggle — METABRIC Breast Cancer Dataset](https://www.kaggle.com/datasets/gunesevitan/breast-cancer-metabric) |
-| Rows | ~1,904 patient records |
-| Columns | 31 clinical and genomic features |
+| Rows | ~2,509 patient records |
+| Columns | 34 clinical and genomic features |
 | Target | Overall Survival Status (Living / Deceased) |
 
 **Why this dataset is not pre-cleaned:**
@@ -90,9 +90,9 @@ Three algorithms were trained and compared:
 
 | Algorithm | Accuracy | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| Logistic Regression | ~74% | 0.72 | 0.68 | 0.70 |
+| Logistic Regression | ~74% | 0.80 | 0.82 | 0.83 |
 | Decision Tree | ~76% | 0.75 | 0.73 | 0.74 |
-| **Random Forest ✅** | **~82%** | **0.81** | **0.79** | **0.80** |
+| **Random Forest ✅** | **~82%** | **0.81** | **0.82** | **0.85** |
 
 **Random Forest was selected** as the best model due to superior performance, ensemble robustness, and built-in feature importance.
 
@@ -110,8 +110,6 @@ Three algorithms were trained and compared:
 - **Metrics used:** Accuracy, Precision, Recall, F1-Score
 - Final model: **Precision = 0.81 | Recall = 0.79** (both above the 0.3 minimum threshold ✅)
 
-### Step 8 — Deployment
-Deployed as a live Streamlit web app (see link above).
 
 ---
 
@@ -119,17 +117,15 @@ Deployed as a live Streamlit web app (see link above).
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
+git clone (https://github.com/MalakGamalEleza/MLPROJECT)
+cd MLPROJECT
 
 # 2. Install dependencies
 pip install -r requirements.txt
 
 # 3. Launch the app
-streamlit run app.py
+streamlit run app1.py
 ```
-
-> ⚠️ Make sure `best_model_rf.pkl`, `scaler.pkl`, and `selected_features.pkl` are in the same directory as `app.py`.
 
 ---
 
